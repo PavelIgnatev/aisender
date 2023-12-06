@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+
+.headerA {
+  text-decoration: none;
+  font-size: 22px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerA:hover .headerSvg {
+  color: rgb(245, 102, 0);
+}
+
+.headerSvg {
+  color: white;
+  transition: .2s all ease-in-out;
+}

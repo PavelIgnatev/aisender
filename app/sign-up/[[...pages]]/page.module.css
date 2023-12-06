@@ -1,0 +1,10 @@
+.main {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(202 206 231);
+}

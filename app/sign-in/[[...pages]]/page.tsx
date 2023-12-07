@@ -9,10 +9,13 @@ export const metadata: Metadata = {
   description: "AiSender - авторизация",
 };
 
-const SignInPage = () => (
-  <main className={classes.main}>
-    <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
-  </main>
-);
-
-export default SignInPage;
+export default function SignInPage() {
+  return <main className={classes.main}>
+    <SignIn
+      path="/sign-in"
+      routing="path"
+      signUpUrl="/sign-up"
+      afterSignInUrl="/workspace"
+    />
+  </main>;
+}

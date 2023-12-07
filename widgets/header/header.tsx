@@ -1,18 +1,20 @@
-import { UserButton } from "@clerk/nextjs";
-
 import Link from "next/link";
+
+import { UserButton } from "@clerk/nextjs";
 
 import classes from "./header.module.css";
 
-export const Header = () => {
+interface HeaderProps {
+  isLogin: boolean;
+  href: string;
+}
+
+export const Header = (props: HeaderProps) => {
+  const { isLogin, href } = props;
+
   return (
     <header className={classes.header}>
-      <Link
-        href="https://t.me/aisender"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes.headerA}
-      >
+      <Link href={href} className={classes.headerA}>
         <svg
           width="155"
           height="20"
@@ -27,7 +29,7 @@ export const Header = () => {
           />
         </svg>
       </Link>
-      <UserButton showName afterSignOutUrl="/" />
+      {isLogin ? <UserButton afterSignOutUrl="/" /> : "вйоит"}
     </header>
   );
 };

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 import Provider from "@/utils/Providers";
-import { Header } from "@/widgets/header/header";
+import { HeaderContainer } from "@/widgets/header/header.container";
 
 import "public/static/css/normalize.css";
 
 export const metadata: Metadata = {
-  title: "AiSender",
+  title: "AiSender - aвтоматизация первой линии продаж на основе Ai",
   description: "Автоматизация первой линии продаж на основе Ai",
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
       <Provider>
         <body suppressHydrationWarning={true}>
-          <Header />
+          <HeaderContainer />
           {children}
         </body>
       </Provider>

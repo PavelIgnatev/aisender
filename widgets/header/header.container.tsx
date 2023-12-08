@@ -1,7 +1,5 @@
 "use client";
 
-import { useMemo } from "react";
-
 import { useUser } from "@clerk/nextjs";
 
 import { Header } from "./header";

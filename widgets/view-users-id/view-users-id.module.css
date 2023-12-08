@@ -1,0 +1,9 @@
+.breadcrumb {
+    margin-bottom: 16px;
+}
+
+.spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

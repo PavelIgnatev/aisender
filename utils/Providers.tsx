@@ -2,6 +2,7 @@
 
 import { ReactNode, useState } from "react";
 import { config as dotenvConfig } from "dotenv";
+import { ConfigProvider } from "antd";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -14,7 +15,9 @@ export default function Provider({ children }: { children: ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ClerkProvider localization={ruRU}>{children}</ClerkProvider>
+      <ConfigProvider>
+        <ClerkProvider localization={ruRU}>{children}</ClerkProvider>
+      </ConfigProvider>
     </QueryClientProvider>
   );
 }

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 
 import { SignUp } from "@clerk/nextjs";
 
-import "public/static/css/normalize.css";
-
 import classes from "./page.module.css";
 
 export const metadata: Metadata = {

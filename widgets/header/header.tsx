@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "antd";
 
 import { UserButton } from "@clerk/nextjs";
 
@@ -29,7 +30,23 @@ export const Header = (props: HeaderProps) => {
           />
         </svg>
       </Link>
-      {isLogin ? <UserButton afterSignOutUrl="/" /> : "вйоит"}
+      {isLogin ? (
+        <UserButton afterSignOutUrl="/" />
+      ) : (
+        <div className={classes.headerButtons}>
+          <Button htmlType="button" href="/sign-in">
+            Войти
+          </Button>
+          <Button
+            type="primary"
+            htmlType="button"
+            href="/sign-up"
+            className={classes.headerButtinAccountCreate}
+          >
+            Зарегистрироваться
+          </Button>
+        </div>
+      )}
     </header>
   );
 };

@@ -10,12 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function SignInPage() {
-  return <main className={classes.main}>
-    <SignIn
-      path="/sign-in"
-      routing="path"
-      signUpUrl="/sign-up"
-      afterSignInUrl="/workspace"
-    />
-  </main>;
+  return (
+    <main className={classes.main}>
+      <SignIn
+        path="/sign-in"
+        routing="path"
+        signUpUrl="/sign-up"
+        afterSignInUrl="/workspace"
+      />
+    </main>
+  );
 }

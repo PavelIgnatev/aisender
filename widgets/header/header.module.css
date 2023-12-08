@@ -26,3 +26,11 @@
   color: white;
   transition: .2s all ease-in-out;
 }
+
+.headerButtons {
+  display: flex;
+}
+
+.headerButtinAccountCreate {
+  margin-left: 8px;
+}
